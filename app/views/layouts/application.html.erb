@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MessageApp5</title>
+    <title>CryptMessage</title>
     <%= favicon_link_tag %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -19,6 +19,7 @@
     </div>
 
     <div class="ui container">
+      <%= render 'layouts/flash_messages' %>
       <%= yield %>
     </div>
 

@@ -1,0 +1,18 @@
+
+<% flash.each do |name, msg| %>
+	<% if notice %>
+		<div class="ui positive message">
+			<i class="close icon"></i>
+			<div class="header">
+				<%= msg %>
+			</div>
+		</div>
+	<% elsif alert %>
+		<div class="ui negative message">
+			<i class="close icon"></i>
+			<div class="header">
+				<%= msg %>
+			</div>
+		</div>
+	<% end %>
+<% end %>

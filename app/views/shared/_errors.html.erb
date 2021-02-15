@@ -1,0 +1,17 @@
+
+<% if resource.errors.any? %>
+	<div class="ui negative message">
+		<i class="close icon"></i>
+		<div class="header">
+			The following errors prevented this
+			<%= resource.class.name.downcase %> from being saved!!
+		</div>
+		<p>  
+			<ul>
+				<% resource.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</p>
+	</div>
+<% end %>

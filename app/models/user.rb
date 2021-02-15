@@ -1,5 +1,6 @@
 class User < ApplicationRecord
     #has_one_attached :avatar
+	has_many :messages
 	before_save { self.email = email.downcase }
 	validates :username, 
 					presence: true, 

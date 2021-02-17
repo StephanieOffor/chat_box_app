@@ -22,4 +22,7 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: crypt_message_production
+  encoding: utf8
+  username: crypt_message
+  password: <%= ENV['CRYPY_MESSAGE_DATABASE_PASSWORD'] %>

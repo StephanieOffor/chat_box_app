@@ -7,20 +7,23 @@
 				<div class="ui form">
 					<div class="field">
 						<label>Username</label>
-						<div>
-							<%= form.text_field :username, placeholder: 'Username', class:"ui left icon input" %>
+						<div class="ui left icon input">
+							<%= form.text_field :username, placeholder: 'Username' %>
+							<i class="user icon" ></i>
 						</div>
 					</div>
                     <div class="field">
 						<label>Email</label>
-						<div>
-							<%= form.email_field :email, placeholder: 'email', class:"ui left icon input" %>
+						<div class="ui left icon input">
+							<%= form.email_field :email, placeholder: 'email' %>
+							<i class="mail icon" ></i>
 						</div>
 					</div>
 					<div class="field">
 						<label>Password</label>
-						<div>
-							<%= form.password_field :password, placeholder: 'Enter your password', class:"ui left icon input" %>
+						<div class="ui left icon input">
+							<%= form.password_field :password, placeholder: 'Enter your password' %>
+							<i class="lock icon" ></i>
 						</div>
 					</div>
 					<div></div>

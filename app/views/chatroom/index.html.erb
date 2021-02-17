@@ -6,28 +6,21 @@
 <div class="ui two column grid">
     <div class="twelve wide column">
         <div class="ui fluid raised card chatbox">
-            <div class="content">
-                <div class="ui feed">
+            <div class="content" id="message-feed">
+                <div class="ui feed" id="chatroom-messages">
                     <%= render @messages %>
                 </div>
             </div>
 
             <div class="extra content">
-                <form class="ui reply form">
+                <%= form_for(@message, html: {class: "ui reply form", role: "form"}, url: message_path, remote: true) do |f| %>
                     <div class="field">
-                        <label>Message</label>
-                        <textarea rows="2"></textarea>
-                        <button class="ui secondary button">
-                            <i class="inverted image icon"></i>
-                        </button>
-                        <button class="ui secondary button">
-                            <i class="inverted video icon"></i>
-                        </button>
-                        <button class="ui secondary button">
-                            <i class="inverted edit icon"></i>Send
-                        </button>
+                        <div class="ui fluid icon input">
+                            <%= f.text_field :body, placeholder: "Enter your message" %>
+                            <%= f.button '<i class="inverted edit icon"></i>send'.html_safe, class: "ui secondary button" %>
+                        </div>
                     </div>
-                </form>
+                <% end %>
             </div>
         </div>
     </div>

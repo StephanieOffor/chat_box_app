@@ -18,7 +18,10 @@ class ApplicationController < ActionController::Base
 		end
 	end
 
-	def messages_list
-		@messages = Message.all
+	def require_user
+		if !logged_in? 
+			flash[:alert] = "You must be logged in to perform that action"
+			redirect_to login_path
+		end
 	end
 end

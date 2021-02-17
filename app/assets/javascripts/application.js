@@ -17,17 +17,17 @@
 //= require semantic-ui
 //= require_tree .
 
-$(document).on('turbolinks:load', function () {
-    $('.ui.dropdown').dropdown();
-})
+scroll_bottom = function() {
+    if ($('#message-feed').length > 0) {
+        $('#message-feed').scrollTop($('#message-feed')[0].scrollHeight);
+    }
+}
 
 $(document).on('turbolinks:load', function () {
-    $('.message .close')
-    .on('click', function() {
-        $(this)
-        .closest('.message')
-        .transition('fade')
-        ;
-    })
-    ;
+    $('.ui.dropdown').dropdown();
+
+    $('.message .close').on('click', function() {
+        $(this).closest('.message').transition('fade')}
+        );
+    scroll_bottom();
 })

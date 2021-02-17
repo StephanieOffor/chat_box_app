@@ -1,17 +1,5 @@
 class MessagesController < ApplicationController
     before_action :require_user
-    
-    def index
-
-    end
-
-    def show
-        @message = Message.find(msg_params)
-    end
-
-    def new
-        @message = Message.new
-    end
 
     def create
         message = current_user.messages.build(msg_params)

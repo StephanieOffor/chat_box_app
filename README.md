@@ -59,10 +59,7 @@ Controllers: (backend)
 To view the live development application on Heroku, please follow the link below.
 https://cryptmessage.herokuapp.com
 
-You can download a Github clone of the project over SSH using link below 
-git@github.com:chidioffor/message_app_5.git
-
 or download via HTTPS:
-https://github.com/chidioffor/message_app_5.git
+https://github.com/StephanieOffor/chat_box_app.git
 
 

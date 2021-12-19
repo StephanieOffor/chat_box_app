@@ -23,34 +23,38 @@ Things you may want to cover:
 
 * ...
 # message_app_5
-This project was written in Rails 5.0
+CryptMessage App
+This personal project delivers end to end Realtime messaging between logged in users over HTTPS connections.
+The project was written in Rails 5.0
 Backend uses Rails(Model, View, Controller) and MySQL database
 Frontend (Views) uses Semantic UI, CSS and Javascript
-
-Models:
-    Application Record Model
-    Messages Model
-    User Model 
-
-Views:
-    Home View 
-    Chatroom View 
-    Layout Views 
-    Messages View 
-    Session View 
-    Shared Views 
-    Users Views 
-
-Controllers:
-    Application Controller 
-    Chatroom Controller 
-    Home Controller 
-    Messages Controller 
-    Sessions Controller 
-    Users Controller 
-
-To facilitate instant messaging betwen users I implimented channels 
+To facilitate instant messaging between users I implemented channels 
 driven by Application cable.
+
+Download a clone of the project from my github repo and see the fully commented project codes.
+Below are the top level design segments of the codes.
+
+Models: (backend)
+    Application Record Model - manages all data read/write to mySQL database
+    Messages Model – manages message storage and retrieval from mySQL database
+    User Model – manages use sessions and interaction with the mySQL database
+
+Views: (everything the users sees and interacts with)
+    Home View – Landing page of the application
+    Chatroom View – default page for logged in users.
+    Layout Views – Manages the layout of most of the pages the user will see
+    Messages View – manages messaging sessions by logged in users
+    Session View – manages login and logout sessions of users
+    Shared Views – manages views common to multiple screens the user will see.
+    Users Views  - manages user creation and edit
+
+Controllers: (backend)
+    Application Controller – Controller for all the application functions. The rest below are sub-controllers to the main application controller.
+    Chatroom Controller – Sub-controller for chatroom
+    Home Controller – Sub-controller for Home screen
+    Messages Controller – Sub-controller messages
+    Sessions Controller – Sub-controller for user sessions
+    Users Controller – Sub-controller for user creation and editing
 
 To view the live development application on Heroku, please follow the link below.
 https://cryptmessage.herokuapp.com
@@ -60,3 +64,5 @@ git@github.com:chidioffor/message_app_5.git
 
 or download via HTTPS:
 https://github.com/chidioffor/message_app_5.git
+
+

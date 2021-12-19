@@ -1,5 +1,5 @@
 class ChatroomController < ApplicationController
-    before_action :require_user
+    before_action :require_user # before executing codes below validate user
 
     def index
        @message = Message.new

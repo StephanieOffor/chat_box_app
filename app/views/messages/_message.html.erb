@@ -2,6 +2,9 @@
     <div class="content">
         <div class="summary">
             <a>
+                @<%= message.created_at.to_s(:short) %>
+            </a> 
+            <a>
                 <%= message.user.username %>
             </a> 
                 wrote 

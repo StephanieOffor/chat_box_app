@@ -1,5 +1,10 @@
 class SessionsController < ApplicationController
+	
 	before_action :logged_in_redirect, only: [:new, :create]
+	# This controlls user login sessions
+	#Check if user is already loged in and redirect to chat room,
+	# or if not logged in, then redirect to new user page
+
 	def new
 		
 	end

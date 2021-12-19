@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-    before_action :require_user
+    before_action :require_user # before executing codes below validate user
 
     def create
         message = current_user.messages.build(msg_params)
